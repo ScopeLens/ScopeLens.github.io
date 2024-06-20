@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的技术与生活——page | Hexo</title>
+  <title>我的技术与生活——Markdown基本语法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `我的技术与生活——page`
+    document.title = `我的技术与生活——Markdown基本语法`
   </script>
 <meta name="generator" content="Hexo 7.2.0"></head>
 
@@ -193,7 +193,7 @@
   const ipt = document.querySelector('#search-input')
   const btn = document.querySelector('#search-btn')
   const layer = document.querySelector('#search-layer')
-  const posts = JSON.parse(`[{"title":"Hello World","path":"2024/06/19/hello-world/"},{"title":"page","path":"2024/06/19/考场管理系统/"}]`)
+  const posts = JSON.parse(`[{"title":"Hello World","path":"2024/06/19/hello-world/"},{"title":"Markdown基本语法","cover":"https://images.pexels.com/photos/21939007/pexels-photo-21939007.jpeg","path":"2024/06/20/Markdown操作/"}]`)
   ipt.addEventListener('keyup', e => {
     if (e.key === 'Enter') {
       handleSearch()
@@ -258,13 +258,13 @@
       <div class="main-left--statics">
         <a href="/categories">
           <div>
-            <span>0</span>
+            <span>1</span>
             <span>分类</span>
           </div>
         </a>
         <a href="/tags">
           <div>
-            <span>0</span>
+            <span>1</span>
             <span>标签</span>
           </div>
         </a>
@@ -335,7 +335,7 @@
       </p>
       <p class="main-left--subtitle">
         <span>上线时间：</span>
-        <span>9天</span>
+        <span>10天</span>
       </p>
       <p class="main-left--subtitle">
         <span>当前版本：</span>
@@ -351,34 +351,95 @@
 
 <div class="article-container">
   <div class="article">
-    <h1 class="article-title">page</h1>
+    <h1 class="article-title">Markdown基本语法</h1>
     <div class="article-info">
       <div class="article-info--item">
         <div class="article-info--info">
           
           <div class="article-info--categories">
             <span>分类：</span>
-            
+            <a class="category-link" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
           </div>
           
           
           <div class="article-info--tags">
             <span>标签：</span>
-            
+            <a class="tag-link" href="/tags/Markdown/" rel="tag">Markdown</a>
           </div>
           
-          <p class="article-info--date">日期：2024-06-19 13:27:43</p>
+          <p class="article-info--date">日期：2024-06-20 09:32:29</p>
         </div>
-        <img src="/imgs/default-cover.webp" alt="" class="article-cover">
+        <img src="https://images.pexels.com/photos/21939007/pexels-photo-21939007.jpeg" alt="" class="article-cover">
       </div>
     </div>
     <article class="article-content markdown-body">
-      
+      <h1 id="标题语法"><a href="#标题语法" class="headerlink" title="标题语法  "></a>标题语法  </h1><p>使用不同数量的”#”来标识标题<br>井号越少，标题等级越高<br><strong>#一级标题</strong></p>
+<blockquote>
+<p>#一级标题</p>
+</blockquote>
+<p><strong>##二级标题</strong></p>
+<blockquote>
+<p>##二级标题   </p>
+</blockquote>
+<p>最多可以添加六个井号来标识不同级别的标题</p>
+<p><em>除此之外，也可以使用&#x3D;&#x3D;&#x3D;&#x3D;和—-来使得上一行的文本被识别成标题格式，不过注意最多标识一和二级标题</em></p>
+<h1 id="换行语法"><a href="#换行语法" class="headerlink" title="换行语法"></a>换行语法</h1><p>可以使用<code>&lt;br&gt;</code>，也就是html语言中的换行标签来换行，因为md最终也会被解析成html语言</p>
+<p>也可以在段落的结尾加上空格(两个以上)+回车键来使得被识别为换行</p>
+<h1 id="标注语法-重点"><a href="#标注语法-重点" class="headerlink" title="标注语法(重点)"></a>标注语法(重点)</h1><p>在字符串两边加上单星号来斜体标注<code>*斜体*</code></p>
+<blockquote>
+<p><em>斜体展示</em></p>
+</blockquote>
+<p>在字符串两边加上双星号来粗体标注<code>**粗体**</code></p>
+<blockquote>
+<p><strong>粗体展示</strong></p>
+</blockquote>
+<p>为引用的字符串前面加上”&gt;”标注引用<br>注意&gt;必须为一行的首字符。</p>
+<blockquote>
+<p>这是一个引用</p>
+<blockquote>
+<p>我们也可以在引用中再使用引用来实现嵌套引用</p>
+</blockquote>
+</blockquote>
+<p><code>[超链接显示名](超链接地址 &quot;超链接title&quot;)</code><br>使用上述的格式可以标注一个链接<br>例如：<br><code>[百度](www.baidu.com &quot;搜索&quot;)</code>  <a href="www.baidu.com" title="搜索">百度</a></p>
+<p>使用反引号&#96;来标注代码块     </p>
+<p><code>System.out.println(&quot;hello world&quot;)</code></p>
+<p>使用尖括号，可以使得标注网页和邮箱<br><code>&lt;ScopeLens@163.com&gt;</code><br><a href="mailto:&#x53;&#x63;&#111;&#x70;&#x65;&#76;&#101;&#x6e;&#115;&#x40;&#x31;&#x36;&#51;&#46;&#99;&#111;&#109;">&#x53;&#x63;&#111;&#x70;&#x65;&#76;&#101;&#x6e;&#115;&#x40;&#x31;&#x36;&#51;&#46;&#99;&#111;&#109;</a></p>
+<p><code>&lt;www.baidu.com&gt;</code><br><a target="_blank" rel="noopener" href="http://www.baidu.com/">http://www.baidu.com</a></p>
+<h1 id="水平线语法"><a href="#水平线语法" class="headerlink" title="水平线语法"></a>水平线语法</h1><p>想要在md中实现水平线非常简单<br><code>---</code>实现<br><strong>注意:使用—来显示水平分割线时，为了避免与标题语法区分开，需要在水平线前加上一行空行</strong></p>
+<hr>
+<p><code>***</code>实现</p>
+<hr>
+<p><code>___</code>实现</p>
+<hr>
+<h1 id="列表语法"><a href="#列表语法" class="headerlink" title="列表语法"></a>列表语法</h1><p><strong>有序列表</strong><br>在md的有序列表，是使用序号来标注的，但是却不是由序号来决定顺序的，例如下面这个例子。   </p>
+<p><code>1. 列表第一项</code><br><code>4. 列表第二项</code><br><code>3. 列表第三项</code></p>
+<ol>
+<li>列表第一项</li>
+<li>列表第二项</li>
+<li>列表第三项</li>
+</ol>
+<p><strong>无序列表</strong></p>
+<p>-，+，*都可以实现无序列表的标识，你可以灵活的选用自己喜欢的符号进行标注，尽可能一个完整的列表中都使用一种符号，我的例子只是为了展示这三种确实可以混用，但是并不推荐。</p>
+<p><code>- 列表第一项</code><br><code>+ 列表第二项</code><br><code>* 列表第三项</code></p>
+<ul>
+<li>列表第一项</li>
+</ul>
+<ul>
+<li>列表第二项</li>
+</ul>
+<ul>
+<li>列表第三项</li>
+</ul>
+<p>**注意：列表需要与其他段落存在一行空行作为分隔，序号需要与列表项间存在一个空格 ** </p>
+<h1 id="图片语法"><a href="#图片语法" class="headerlink" title="图片语法"></a>图片语法</h1><p><code>![图片显示名](图片链接地址 &quot;图片title&quot;)</code><br>使用上述的格式可以标注一个图片，其实和超链接的格式就差了一个感叹号而已。<br>例如：</p>
+<p><code>![这是图片](/assets/img/philly-magic-garden.jpg &quot;Magic Gardens&quot;)</code></p>
+<p><img src="/assets/img/philly-magic-garden.jpg" alt="这是图片" title="Magic Gardens"></p>
+
     </article>
     
     <div class="read-nums">
       <!-- id 将作为查询条件 -->
-      <span id="2024/06/19/考场管理系统/" class="leancloud_visitors" data-flag-title="Your Article Title">
+      <span id="2024/06/20/Markdown操作/" class="leancloud_visitors" data-flag-title="Your Article Title">
         <em class="post-meta-item-text">浏览量</em>
         <i class="leancloud-visitors-count"></i>
       </span>
@@ -394,7 +455,7 @@
     <div class="article-catelogue--wrapper">
       <div class="catelogue catelogue-1">
         <h3>目录</h3>
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E9%A2%98%E8%AF%AD%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">标题语法  </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C%E8%AF%AD%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">换行语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E6%B3%A8%E8%AF%AD%E6%B3%95-%E9%87%8D%E7%82%B9"><span class="toc-number">3.</span> <span class="toc-text">标注语法(重点)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B0%B4%E5%B9%B3%E7%BA%BF%E8%AF%AD%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">水平线语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">列表语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E8%AF%AD%E6%B3%95"><span class="toc-number">6.</span> <span class="toc-text">图片语法</span></a></li></ol>
       </div>
       
         <div class="catelogue catelogue-2">
@@ -424,7 +485,7 @@
     recordIP: config.recordIP,
     visitor: config.visitor,
     enableQQ: config.enableQQ,
-    path: '2024/06/19/考场管理系统/'
+    path: '2024/06/20/Markdown操作/'
   })
 </script>
 

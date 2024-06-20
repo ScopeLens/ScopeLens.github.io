@@ -193,7 +193,7 @@
   const ipt = document.querySelector('#search-input')
   const btn = document.querySelector('#search-btn')
   const layer = document.querySelector('#search-layer')
-  const posts = JSON.parse(`[{"title":"Hello World","path":"2024/06/19/hello-world/"},{"title":"page","path":"2024/06/19/考场管理系统/"}]`)
+  const posts = JSON.parse(`[{"title":"Hello World","path":"2024/06/19/hello-world/"},{"title":"Markdown基本语法","cover":"https://images.pexels.com/photos/21939007/pexels-photo-21939007.jpeg","path":"2024/06/20/Markdown操作/"}]`)
   ipt.addEventListener('keyup', e => {
     if (e.key === 'Enter') {
       handleSearch()
@@ -258,13 +258,13 @@
       <div class="main-left--statics">
         <a href="/categories">
           <div>
-            <span>0</span>
+            <span>1</span>
             <span>分类</span>
           </div>
         </a>
         <a href="/tags">
           <div>
-            <span>0</span>
+            <span>1</span>
             <span>标签</span>
           </div>
         </a>
@@ -335,7 +335,7 @@
       </p>
       <p class="main-left--subtitle">
         <span>上线时间：</span>
-        <span>9天</span>
+        <span>10天</span>
       </p>
       <p class="main-left--subtitle">
         <span>当前版本：</span>
@@ -352,14 +352,22 @@
   <div class="index-left">
     
       <div class="index-article">
-        <!-- <img class="index-article--cover" src="/imgs/default-cover.webp" alt=""> -->
+        <!-- <img class="index-article--cover" src="https://images.pexels.com/photos/21939007/pexels-photo-21939007.jpeg" alt=""> -->
         <div class="index-article--box">
-          <img class="index-article--cover" data-cover="imgs/default-cover.webp" alt="page" />
+          <img class="index-article--cover" data-cover="https://images.pexels.com/photos/21939007/pexels-photo-21939007.jpeg" alt="Markdown基本语法" />
         </div>
         <div class="index-article--content">
-          <a href="/2024/06/19/%E8%80%83%E5%9C%BA%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">page </a>
+          <a href="/2024/06/20/Markdown%E6%93%8D%E4%BD%9C/">Markdown基本语法 </a>
           <div>
             
+              <p>
+                <a class="post-category-link" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a>
+              </p>
+            
+            
+              <p>
+                <a class="-link" href="/tags/Markdown/" rel="tag">Markdown</a>
+              </p>
             
           </div>
           <div class="bg"></div>
@@ -387,8 +395,8 @@
   </div>
   <div class="index-right">
     <div class="index-right-wrapper">
-      
-      
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a></li></ul>
+      <ul class="tags" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li></ul>
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">2024年06月</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
