@@ -193,7 +193,7 @@
   const ipt = document.querySelector('#search-input')
   const btn = document.querySelector('#search-btn')
   const layer = document.querySelector('#search-layer')
-  const posts = JSON.parse(`[{"title":"Hello World","path":"2024/06/19/hello-world/"},{"title":"Markdown基本语法","cover":"https://images.pexels.com/photos/21939007/pexels-photo-21939007.jpeg","path":"2024/06/20/Markdown操作/"}]`)
+  const posts = JSON.parse(`[{"title":"Hello World","path":"2024/06/19/hello-world/"},{"title":"Markdown基本语法","cover":"https://images.pexels.com/photos/21939007/pexels-photo-21939007.jpeg","path":"2024/06/20/Markdown操作/"},{"title":"项目记录","cover":"https://images.pexels.com/photos/25539612/pexels-photo-25539612.jpeg","path":"2024/06/24/Projects/"}]`)
   ipt.addEventListener('keyup', e => {
     if (e.key === 'Enter') {
       handleSearch()
@@ -258,13 +258,13 @@
       <div class="main-left--statics">
         <a href="/categories">
           <div>
-            <span>1</span>
+            <span>2</span>
             <span>分类</span>
           </div>
         </a>
         <a href="/tags">
           <div>
-            <span>1</span>
+            <span>2</span>
             <span>标签</span>
           </div>
         </a>
@@ -327,11 +327,11 @@
       </h5>
       <p class="main-left--subtitle">
         <span>文章数目：</span>
-        <span>2 篇</span>
+        <span>3 篇</span>
       </p>
       <p class="main-left--subtitle">
         <span>最近动态：</span>
-        <span>3天前</span>
+        <span>今天</span>
       </p>
       <p class="main-left--subtitle">
         <span>上线时间：</span>
@@ -352,7 +352,7 @@
 <div class="tags">
   <h2 class="tags-title">小站标签</h2>
   <div class="tags-list">
-    <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a>
+    <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a>
   </div>
 </div>
 
